@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { AiOutlineBars } from "react-icons/ai";
 import { RiCloseLine } from "react-icons/ri";
-import { SiAnaconda } from "react-icons/si";
+import {DiCodeigniter} from "react-icons/di"
+
 import './Navbar.css';
 
 
@@ -24,10 +25,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="logo">
-        <SiAnaconda color="#fff" size={30} />
         <p className='logo-text'>
-          store
-          <span>Name</span>
+          <span >
+            <DiCodeigniter   size={30} />
+            <DiCodeigniter  size={30} />
+          </span>
+          <span>
+           لوگوی شما
+          </span>
         </p>
       </div>
       <div className="menu-icons" onClick={toggleMenu}>
