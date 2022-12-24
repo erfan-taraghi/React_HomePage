@@ -1,11 +1,40 @@
-import React from 'react'
-
-const Faq = () => {
+import React,{useEffect} from 'react';
+import { MdOutlineLibraryBooks } from "react-icons/md";
+import { questions } from './data.js';
+import Question from './Question.js';
+import './Faq.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+function Faq() { 
+  useEffect(()=>{
+    AOS.init({
+        duration: 1000
+    });
+   })
   return (
-    <div>
-      سوالات
-    </div>
-  )
+    <section id="faq">
+      <div className="container faq">
+        <div className="faq-title" data-aos="fade-up">
+          <MdOutlineLibraryBooks color="orangered" size={30} />
+          <h2>سوالات متداول</h2>
+          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک استلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+        </div>
+
+        <div className="questions" data-aos="flip-left"  data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+          {
+            questions && questions.map((question) =>
+            <Question
+            key={question.id}
+            title={question.title}
+            answer={question.answer} 
+              />
+            )
+          }
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Faq
+export default Faq;

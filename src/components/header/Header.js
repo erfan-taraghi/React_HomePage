@@ -1,14 +1,21 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import phoneHeader from "../../images/picDesign.webp"
 import { SiCbs } from "react-icons/si";
 import './Header.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Header = () => {
+   useEffect(()=>{
+    AOS.init({
+        duration: 1000
+    });
+   })
     return ( <
         section id = "header" >
         <
         div className = "container header" >
         <
-        div className = "header-right" >
+        div className = "header-right" data-aos="fade-right" >
         <
         h1 >
         <
@@ -25,7 +32,7 @@ const Header = () => {
         className = "btn btn-light" > چجوری کار میکنیم < /a> <
         /div> <
         /div> <
-        div className = "header-left" >
+        div className = "header-left"data-aos="flip-left" >
         <
         img src = { phoneHeader }
         alt = "" / >

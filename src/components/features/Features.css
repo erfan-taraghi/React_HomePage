@@ -92,6 +92,7 @@
     }
     .features-content .features-left {
         width: 100%;
+        height: 75vh
     }
     .features-right img {
         width: 80vh;

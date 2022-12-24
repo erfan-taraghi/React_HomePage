@@ -1,0 +1,91 @@
+#subscribe {
+    background: url(../../images/subimages.jpg);
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+
+.subscribe h2 {
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 3rem;
+    color: #fff;
+}
+
+form>* {
+    font-family: 'vazir';
+}
+
+form button {
+    background: var(--form-button);
+    border: 2px solid var(--form-button);
+    padding: 1rem;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+}
+
+form input {
+    padding: 1rem;
+    width: 400px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    border: 2px solid gainsboro;
+    background: transparent;
+    direction: ltr;
+    color: #fff;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.socials .social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.socials .social-icon svg {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    form input {
+        width: 100%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    form button {
+        width: 100%;
+        margin-bottom: 2rem;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    @media screen and (max-width: 400px) {
+        .socials {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .socials .social-icon {
+            width: 20%;
+            margin: 0;
+        }
+    }
+}
